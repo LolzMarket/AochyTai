@@ -7,13 +7,19 @@
 <meta name="description" content="AochyTai - 他界隈交流Discordサーバー公式ページ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-ring">
+    <img src="logo.png" alt="" class="loader-logo">
+  </div>
+</div>
+
 <header class="nav">
-  <a class="nav-logo" href="#top"><span class="dot"></span>AochyTai</a>
+  <a class="nav-logo" href="#top"><img src="logo.png" class="nav-logo-img" alt="">AochyTai</a>
   <nav class="nav-links">
     <a href="#categories">カテゴリ</a>
     <a href="#alliance">同盟鯖</a>
@@ -24,13 +30,17 @@
 <main>
 
   <section class="hero" id="top">
-    <p class="eyebrow"><span class="dot"></span>Discord Community</p>
     <h1 class="hero-title">AochyTai</h1>
     <p class="hero-sub">気軽に話せる大規模雑談ゲーム技術…サーバーです。<br>遠慮なんかするな！</p>
     <div class="hero-actions">
-      <a class="btn-primary" href="https://discord.gg/FzKa9DHPrc" target="_blank" rel="noopener">サーバーに参加する</a>
-      <a class="btn-text" href="#categories">カテゴリを見る →</a>
+      <a class="btn-primary" href="https://discord.gg/FzKa9DHPrc" target="_blank" rel="noopener">参加する</a>
+      <a class="btn-outline" href="#categories">カテゴリを見る</a>
+      <a class="btn-outline" href="#alliance">同盟鯖を見る</a>
     </div>
+  </section>
+
+  <section class="banner">
+    <img src="banner.png" alt="AochyTai Discordコミュニティの様子" class="banner-img">
   </section>
 
   <section class="section" id="categories">
@@ -74,7 +84,6 @@
   </section>
 
 </main>
-
 <footer class="footer">
   <p>&copy; 2026 AochyTai</p>
 </footer>
@@ -82,15 +91,23 @@
 <section class="secret" id="secret">
   <p class="secret-mark">✦</p>
   <p class="secret-hint">You scrolled all the way down</p>
-  <p class="secret-taunt">よくスクロールしたね!お前にそんなことする時間ある?課題やれよ<br>それかこれで脳溶かしてこうぜ</p>
+  <p class="secret-taunt">ガキには厳しかったかな?^^ もっと厳しいやつがこれ!</p>
 
-  <div class="codebox">
-    <p class="codebox-label">合言葉を知ってるなら、入力してみて。</p>
-    <form class="codebox-form" id="codeForm" autocomplete="off">
-      <input type="text" id="codeInput" placeholder="合言葉" aria-label="合言葉">
-      <button type="submit">解く</button>
-    </form>
-    <p class="codebox-result" id="codeResult"></p>
+  <div class="codebox-wrapper" id="codeboxWrapper">
+    <div class="lock-gate" id="lockGate">
+      <div class="lock-icon-wrap">
+        <span class="key-icon" id="keyIcon">🔑</span>
+        <span class="lock-icon" id="lockIcon">🔒</span>
+      </div>
+      <p class="lock-text" id="lockText">5秒待ってみて…</p>
+    </div>
+    <div class="codebox">
+      <form class="codebox-form" id="codeForm" autocomplete="off">
+        <input type="text" id="codeInput" placeholder="合言葉" aria-label="合言葉" disabled>
+        <button type="submit" disabled>解く</button>
+      </form>
+      <p class="codebox-result" id="codeResult"></p>
+    </div>
   </div>
 </section>
 
