@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AochyTai | 他界隈交流サーバー</title>
+<meta name="description" content="AochyTai - 他界隈交流Discordサーバー公式ページ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav-logo" href="#top"><span class="dot"></span>AochyTai</a>
+  <nav class="nav-links">
+    <a href="#categories">カテゴリ</a>
+    <a href="#alliance">同盟鯖</a>
+  </nav>
+  <a class="nav-cta" href="https://discord.gg/FzKa9DHPrc" target="_blank" rel="noopener">参加する</a>
+</header>
+
+<main>
+
+  <section class="hero" id="top">
+    <p class="eyebrow"><span class="dot"></span>Discord Community</p>
+    <h1 class="hero-title">AochyTai</h1>
+    <p class="hero-sub">気軽に話せる大規模雑談ゲーム技術…サーバーです。<br>遠慮なんかするな！</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="https://discord.gg/FzKa9DHPrc" target="_blank" rel="noopener">サーバーに参加する</a>
+      <a class="btn-text" href="#categories">カテゴリを見る →</a>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <p class="eyebrow eyebrow--muted">Categories</p>
+    <h2 class="section-title">サーバーの中身</h2>
+    <p class="section-lead">主なカテゴリはこの4つ。気になるところから覗いてみてください。</p>
+
+    <ul class="cat-list">
+      <li class="cat-item"><span class="cat-num">01</span><h3 class="cat-title">雑談</h3><p class="cat-desc">カスみたいな話でも大歓迎</p><span class="cat-arrow">→</span></li>
+      <li class="cat-item"><span class="cat-num">02</span><h3 class="cat-title">ゲーム</h3><p class="cat-desc">バカみたいに上手い奴が沢山</p><span class="cat-arrow">→</span></li>
+      <li class="cat-item"><span class="cat-num">03</span><h3 class="cat-title">技術</h3><p class="cat-desc">バカみたいに天才な奴が沢山</p><span class="cat-arrow">→</span></li>
+      <li class="cat-item"><span class="cat-num">04</span><h3 class="cat-title">交流</h3><p class="cat-desc">荒らし界隈などに属している有名人も参加!なんでだろうねガチで</p><span class="cat-arrow">→</span></li>
+    </ul>
+  </section>
+
+  <section class="section section--alt" id="alliance">
+    <p class="eyebrow eyebrow--muted">Alliance</p>
+    <h2 class="section-title">特別同盟鯖</h2>
+    <p class="section-lead">仲良くしてもらってる同盟サーバーはこの3つ。</p>
+
+    <ul class="alliance-list">
+      <li class="alliance-item">
+        <span class="alliance-name">United Nameless</span>
+        <a class="btn-small" href="https://discord.gg/6XPU8FsGqG" target="_blank" rel="noopener">参加する</a>
+      </li>
+      <li class="alliance-item">
+        <span class="alliance-name">Server Union</span>
+        <a class="btn-small" href="https://discord.gg/gmuvFZUd82" target="_blank" rel="noopener">参加する</a>
+      </li>
+      <li class="alliance-item">
+        <span class="alliance-name">すな鯖</span>
+        <a class="btn-small" href="https://discord.gg/4rYMjuDbQc" target="_blank" rel="noopener">参加する</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section cta-band">
+    <h2 class="cta-title">気軽に参加してみてね</h2>
+    <a class="btn-primary" href="https://discord.gg/FzKa9DHPrc" target="_blank" rel="noopener">サーバーに参加する</a>
+    <p class="invite-code">招待リンク: <code>discord.gg/FzKa9DHPrc</code></p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 AochyTai</p>
+</footer>
+
+<section class="secret" id="secret">
+  <p class="secret-mark">✦</p>
+  <p class="secret-hint">You scrolled all the way down</p>
+  <p class="secret-taunt">よくスクロールしたね!お前にそんなことする時間ある?課題やれよ<br>それかこれで脳溶かしてこうぜ</p>
+
+  <div class="codebox">
+    <p class="codebox-label">合言葉を知ってるなら、入力してみて。</p>
+    <form class="codebox-form" id="codeForm" autocomplete="off">
+      <input type="text" id="codeInput" placeholder="合言葉" aria-label="合言葉">
+      <button type="submit">解く</button>
+    </form>
+    <p class="codebox-result" id="codeResult"></p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
