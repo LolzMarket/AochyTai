@@ -61,8 +61,9 @@ if (revealEls.length) {
   revealEls.forEach((el) => revealObserver.observe(el));
 }
 
-// 一番下の隠し機能:5秒経つまで完全に見えないようにし、経過後に解放演出
+// 一番下の隠し機能:最初はスペースごと存在せず、一番下で5秒待つと出現する
 const secret = document.getElementById('secret');
+const footerEl = document.querySelector('.footer');
 const codeForm = document.getElementById('codeForm');
 const codeInput = document.getElementById('codeInput');
 const codeResult = document.getElementById('codeResult');
@@ -79,7 +80,12 @@ function revealSecret() {
   if (isUnlocked) return;
   isUnlocked = true;
 
-  secret.classList.add('is-visible');
+  // スペースごと出現させる
+  secret.style.display = 'block';
+  requestAnimationFrame(() => {
+    secret.classList.add('is-visible');
+  });
+
   codeboxWrapper.classList.add('is-revealing');
 
   setTimeout(() => {
@@ -99,7 +105,7 @@ function revealSecret() {
   }, 1400);
 }
 
-if (secret && codeboxWrapper) {
+if (secret && codeboxWrapper && footerEl) {
   const gateObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (isUnlocked) return;
@@ -113,8 +119,8 @@ if (secret && codeboxWrapper) {
         revealTimer = null;
       }
     });
-  }, { threshold: 0.1 });
-  gateObserver.observe(secret);
+  }, { threshold: 0.99 });
+  gateObserver.observe(footerEl);
 }
 
 if (codeForm) {

@@ -476,6 +476,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   padding: 120px clamp(20px, 6vw, 64px) 140px;
   background: var(--ink);
   color: #fff;
+  display: none;
   opacity: 0;
   transform: translateY(16px);
   transition: opacity .7s ease, transform .7s ease;
