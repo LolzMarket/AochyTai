@@ -7,6 +7,7 @@ const loaderPercent = document.getElementById('loaderPercent');
 const loaderRing = document.getElementById('loaderRingProgress');
 const RING_CIRCUMFERENCE = 289;
 const LOAD_DURATION = 2500;
+const HOLD_DURATION = 500;
 
 if (loader) {
   const startTime = performance.now();
@@ -27,7 +28,7 @@ if (loader) {
     setTimeout(() => {
       loader.classList.add('is-hidden');
       document.body.classList.remove('is-loading');
-    }, LOAD_DURATION);
+    }, LOAD_DURATION + HOLD_DURATION);
   });
 } else {
   document.body.classList.remove('is-loading');
