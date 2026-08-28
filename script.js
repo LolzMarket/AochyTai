@@ -4,6 +4,8 @@
 document.body.classList.add('is-loading');
 const loader = document.getElementById('loader');
 const loaderPercent = document.getElementById('loaderPercent');
+const loaderRing = document.getElementById('loaderRingProgress');
+const RING_CIRCUMFERENCE = 289;
 const LOAD_DURATION = 2500;
 
 if (loader) {
@@ -12,6 +14,9 @@ if (loader) {
     const elapsed = now - startTime;
     const pct = Math.min(100, Math.round((elapsed / LOAD_DURATION) * 100));
     if (loaderPercent) loaderPercent.textContent = pct + '%';
+    if (loaderRing) {
+      loaderRing.style.strokeDashoffset = RING_CIRCUMFERENCE * (1 - pct / 100);
+    }
     if (elapsed < LOAD_DURATION) {
       requestAnimationFrame(tickPercent);
     }

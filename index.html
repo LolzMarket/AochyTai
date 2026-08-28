@@ -16,7 +16,10 @@
   <p class="loader-label">Loading</p>
   <div class="loader-spinner">
     <img src="logo.png" alt="" class="loader-logo">
-    <div class="loader-ring"></div>
+    <svg class="loader-ring-svg" viewBox="0 0 100 100">
+      <circle class="loader-ring-track" cx="50" cy="50" r="46"></circle>
+      <circle class="loader-ring-progress" id="loaderRingProgress" cx="50" cy="50" r="46"></circle>
+    </svg>
   </div>
   <p class="loader-percent" id="loaderPercent">0%</p>
 </div>
@@ -91,7 +94,6 @@
 
 <section class="secret" id="secret">
   <p class="secret-mark">✦</p>
-  <p class="secret-hint">You scrolled all the way down</p>
 
   <div class="codebox-wrapper" id="codeboxWrapper">
     <div class="lock-gate" id="lockGate">
